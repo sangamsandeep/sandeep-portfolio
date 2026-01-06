@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Data Engineer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container header">
+    <div>
+      <h1>Sandeep Sangem</h1>
+      <p class="subtitle">Data Engineer  • Cloud • Streaming</p>
+      <p class="tagline">
+        I build reliable data pipelines, streaming systems, and APIs. Strong in Spark, Kafka, SQL, and cloud.
+      </p>
+      <div class="cta">
+        <a class="btn" href="#work">View Work</a>
+        <a class="btn btn-outline" href="#games">Play Data Games</a>
+        <a class="btn btn-strong" href="assets/PurchaseReceipt.pdf" download>Download Resume</a>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Quick Resume</h2>
+      <ul class="bullets">
+        <li><b>Experience:</b> X years in Data Engineering / Backend</li>
+        <li><b>Stack:</b> Spark, Kafka, SQL, Airflow, AWS/Azure/GCP</li>
+        <li><b>Strengths:</b> ETL, CDC, streaming, data quality, APIs</li>
+      </ul>
+      <div class="mini">
+        <p><b>Email:</b> you@email.com</p>
+        <p><b>LinkedIn:</b> linkedin.com/in/your-handle</p>
+        <p><b>GitHub:</b> github.com/your-handle</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="work" class="section">
+      <div class="section-head">
+        <h2>Work</h2>
+        <div class="filters">
+          <input id="search" placeholder="Search projects, tools, keywords..." />
+          <select id="toolFilter">
+            <option value="">All tools</option>
+            <option>Kafka</option>
+            <option>Spark</option>
+            <option>Airflow</option>
+            <option>AWS</option>
+            <option>SQL</option>
+            <option>Spring Boot</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="projects" class="grid"></div>
+
+      <div id="detail" class="detail card hidden">
+        <div class="detail-head">
+          <h3 id="dTitle"></h3>
+          <button id="closeDetail" class="x">✕</button>
+        </div>
+        <p id="dSummary" class="muted"></p>
+
+        <div class="pill-row" id="dTools"></div>
+
+        <div class="two-col">
+          <div>
+            <h4>What I did</h4>
+            <ul id="dBullets" class="bullets"></ul>
+          </div>
+          <div>
+            <h4>Impact</h4>
+            <ul id="dImpact" class="bullets"></ul>
+          </div>
+        </div>
+
+        <div class="links" id="dLinks"></div>
+      </div>
+    </section>
+
+    <section id="games" class="section">
+      <h2>Data Games</h2>
+      <p class="muted">Small interactive demos to show data thinking. Add more over time.</p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Game 1: Guess the Trend</h3>
+          <p class="muted">You see the last 8 points. Guess whether the next point is up or down.</p>
+          <div class="chartbox">
+            <canvas id="trendCanvas" width="520" height="180"></canvas>
+          </div>
+          <div class="row">
+            <button class="btn" id="guessUp">Up</button>
+            <button class="btn btn-outline" id="guessDown">Down</button>
+            <button class="btn btn-strong" id="newTrend">New Round</button>
+          </div>
+          <p id="trendResult" class="result"></p>
+        </div>
+
+        <div class="card">
+          <h3>Game 2: SQL Quick Quiz</h3>
+          <p class="muted">Pick the correct SQL for each question.</p>
+          <div id="sqlQuiz"></div>
+          <button class="btn btn-strong" id="nextQ">Next Question</button>
+          <p id="sqlResult" class="result"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>About</h2>
+      <div class="card">
+        <p>
+          
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Your Name</span>
+      <span class="muted">Built with HTML/CSS/JS • Deploy on GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
