@@ -562,7 +562,7 @@ const projectsData = [
   }
   
   searchEl.addEventListener("input", applyFilters);
-  toolFilterEl.addEventListener("change", () => { updateRemoveBtnState(); applyFilters(); });
+  toolFilterEl.addEventListener("change", applyFilters);
   
   // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
