@@ -22,6 +22,10 @@
   .header{display:grid; grid-template-columns: 1.3fr .9fr; gap:18px; align-items:start;}
   @media (max-width: 900px){ .header{grid-template-columns:1fr;} }
   
+  .profile-pic{width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:12px; border:3px solid var(--border);}
+  .mini{font-size:13px; margin-top:12px; line-height:1.6;}
+  .mini p{margin:4px 0;}
+  
   h1{font-size:44px; margin:0 0 6px;}
   .subtitle{margin:0 0 12px; color:var(--muted);}
   .tagline{max-width:60ch; color:var(--text); opacity:.92;}
@@ -48,7 +52,12 @@
   }
   
   .grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;}
-  @media (max-width: 900px){ .grid{grid-template-columns:1fr;} }
+  @media (max-width: 900px){ 
+    .grid{grid-template-columns:1fr;}
+    input, select{min-width:100%; width:100%;}
+    .filters{width:100%;}
+    .section-head{flex-direction:column; align-items:flex-start;}
+  }
   
   .project{cursor:pointer; transition: transform .12s ease;}
   .project:hover{transform: translateY(-2px);}
