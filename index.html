@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Data Engineer</title>
+  <title>Sandeep Sangem — Data Engineer</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  
   <header class="container header">
     <div>
+      <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic" />
       <h1>Sandeep Sangem</h1>
       <p class="subtitle">Data Engineer  • Cloud • Streaming</p>
       <p class="tagline">
@@ -16,26 +18,45 @@
       </p>
       <div class="cta">
         <a class="btn" href="#work">View Work</a>
-        <a class="btn btn-outline" href="#games">Play Data Games</a>
+        <a class="btn" href="tel:+13312266963" onclick="window.location.href='tel:+13312266963'" aria-label="Call Sandeep" title="Call +1 331-226-6963">
+          <svg class="icon icon-phone" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 16.92V20a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3 5.18 2 2 0 0 1 5 3h3.09a2 2 0 0 1 2 1.72c.12 1.03.38 2.03.78 2.96a2 2 0 0 1-.45 2.11L9.91 12.91a16 16 0 0 0 6.07 6.07l1.12-1.12a2 2 0 0 1 2.11-.45c.93.4 1.93.66 2.96.78A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Call Me
+        </a>
+        <a class="btn btn-outline" href="mailto:sangem7@outlook.com" aria-label="Email Sandeep">Email Me</a>
         <a class="btn btn-strong" href="assets/PurchaseReceipt.pdf" download>Download Resume</a>
       </div>
     </div>
     <div class="card">
       <h2>Quick Resume</h2>
-      <ul class="bullets">
-        <li><b>Experience:</b> X years in Data Engineering / Backend</li>
-        <li><b>Stack:</b> Spark, Kafka, SQL, Airflow, AWS/Azure/GCP</li>
-        <li><b>Strengths:</b> ETL, CDC, streaming, data quality, APIs</li>
+      <h4>Professional Summary</h4>
+      <p class="muted" style="margin-top:8px;">
+        Data engineer with 8+ years’ experience in big data and distributed systems. Skilled in designing and operating scalable Hadoop and Spark pipelines (batch and streaming), implementing data quality and reconciliation frameworks, automating pipelines and CI/CD, and performing large-scale Teradata ↔ Hadoop migrations.
+      </p>
+
+      <h4 style="margin-top:12px;">Technical skills</h4>
+      <ul class="bullets" style="columns:2;">
+        <li><b>Big Data:</b> Hadoop, HDFS, YARN, MapReduce, Hive, Pig, Spark, Sqoop, Flume, Kafka, Zookeeper, Oozie, Parquet</li>
+        <li><b>Languages & Tools:</b> Java, Scala, Python, SQL, Shell, Spark, Impala</li>
+        <li><b>Databases:</b> Teradata, MySQL, Oracle, HBase, Cassandra</li>
+        <li><b>Cloud & Infra:</b> AWS (EC2, S3, Athena), Jenkins, Bitbucket, Autosys, CI/CD</li>
       </ul>
+
       <div class="mini">
-        <p><b>Email:</b> you@email.com</p>
-        <p><b>LinkedIn:</b> linkedin.com/in/your-handle</p>
-        <p><b>GitHub:</b> github.com/your-handle</p>
+        <p><b>Email:</b> sangem7@outlook.com</p>
+        <p><b>LinkedIn:</b> https://www.linkedin.com/in/s-sandeep94/</p>
+        <p><b>GitHub:</b> https://github.com/sangamsandeep</p>
       </div>
     </div>
   </header>
 
   <main class="container">
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <div id="experienceList" class="grid"></div>
+    </section>
+
     <section id="work" class="section">
       <div class="section-head">
         <h2>Work</h2>
@@ -43,12 +64,6 @@
           <input id="search" placeholder="Search projects, tools, keywords..." />
           <select id="toolFilter">
             <option value="">All tools</option>
-            <option>Kafka</option>
-            <option>Spark</option>
-            <option>Airflow</option>
-            <option>AWS</option>
-            <option>SQL</option>
-            <option>Spring Boot</option>
           </select>
         </div>
       </div>
@@ -79,40 +94,28 @@
       </div>
     </section>
 
-    <section id="games" class="section">
-      <h2>Data Games</h2>
-      <p class="muted">Small interactive demos to show data thinking. Add more over time.</p>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Game 1: Guess the Trend</h3>
-          <p class="muted">You see the last 8 points. Guess whether the next point is up or down.</p>
-          <div class="chartbox">
-            <canvas id="trendCanvas" width="520" height="180"></canvas>
-          </div>
-          <div class="row">
-            <button class="btn" id="guessUp">Up</button>
-            <button class="btn btn-outline" id="guessDown">Down</button>
-            <button class="btn btn-strong" id="newTrend">New Round</button>
-          </div>
-          <p id="trendResult" class="result"></p>
-        </div>
-
-        <div class="card">
-          <h3>Game 2: SQL Quick Quiz</h3>
-          <p class="muted">Pick the correct SQL for each question.</p>
-          <div id="sqlQuiz"></div>
-          <button class="btn btn-strong" id="nextQ">Next Question</button>
-          <p id="sqlResult" class="result"></p>
+    <section id="news" class="section">
+      <div class="section-head">
+        <h2>Tech Trends</h2>
+        <div class="filters">
+          <select id="newsSource">
+            <option value="hn">Hacker News</option>
+          </select>
         </div>
       </div>
+
+      <p class="muted">
+        Headlines are fetched from public sources (no employer/client data).
+      </p>
+
+      <div id="newsList" class="grid"></div>
     </section>
 
     <section class="section">
       <h2>About</h2>
       <div class="card">
         <p>
-          
+          By day, I build data pipelines that work; by night, it's black coffee and a chessboard, chasing better thinking even when my 900 rating refuses to cooperate. I lose often—usually to family—but I return every time, because persistence defines me. Family is my anchor and my motivation, keeping me grounded through life, code, and production failures. A devoted Marvel fan, I believe every superhero story carries a lesson, with Iron Man's confidence and flaws feeling all too familiar. Somewhere between late-night coding, strong coffee, and quiet cricket conversations, I keep moving forward—one Spark job at a time, making data work better.
         </p>
       </div>
     </section>
